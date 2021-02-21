@@ -6,8 +6,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+
+        {/* Sintaxis de un Label en JSX */}
+        <label htmlFor="name">Nombre: </label>
+
+        <input id="name" type="text" />
+
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hola me llamo <code>Daniel Canaviri</code> y te doy la bienvenida al maravilloso mundo de REACT!!!.
         </p>
         <a
           className="App-link"
@@ -15,7 +21,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Aprende React
         </a>
       </header>
     </div>
