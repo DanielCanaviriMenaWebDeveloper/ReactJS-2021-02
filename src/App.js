@@ -5,7 +5,9 @@ function App() {
 	let nombre = 'Daniel';
 
 	/* Simulemos un escenario de autenticación */
-	let auth = true; /* Autenticación: false, usuario no autenticado */
+	let auth = false; /* Autenticación: false, usuario no autenticado */
+
+	let estaciones = ['Primavera', 'Verano', 'Otoño', 'Invierno'];
 
 	return (
 		<>{/* Fragmentos */}
@@ -31,6 +33,16 @@ function App() {
 						Hola me llamo <code>Daniel Canaviri</code> y te doy la
 						bienvenida al maravilloso mundo de REACT!!!.
 					</p>
+
+					<ul>
+						{
+							estaciones.map((estacion, index) => (
+								<li key={ index }>
+									{ estacion }
+								</li>
+							))
+						}
+					</ul>
 
 					<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
 						Aprende React
