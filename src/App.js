@@ -22,8 +22,8 @@ function App() {
 			</header>
 
 			<section>
-				<Componente />	
-			</section> 
+				<Componente msg="Hola soy un Componente desde una prop" />
+			</section>
 		</div>
 	);
 }
