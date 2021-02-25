@@ -22,7 +22,7 @@ function App() {
 			</header>
 
 			<section>
-				<Componente msg="Hola soy un Componente funcional desde una prop" />
+				<Componente msg="Hola este es un mensaje desde el componente Padre" />
 			</section>
 		</div>
 	);

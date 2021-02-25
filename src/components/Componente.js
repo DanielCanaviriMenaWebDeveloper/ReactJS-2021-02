@@ -10,12 +10,15 @@ class Componente extends Component {
 */
 
 /*  Ejemplo de Componente Funcional usando una Función Declarada, 
-    recibe una propiedad desde un componente padre. */
+    recibe una propiedad desde un componente padre. 
 function Componente(props) {
     return <h2>{ props.msg }</h2>
 }
+*/
 
-
+/*  Ejemplo de Componente Funcional usando una Función Expresada, 
+    recibe una propiedad desde un componente padre. */
+const Componente = props => <h2>{ props.msg }</h2>
 
 
 export default Componente;
