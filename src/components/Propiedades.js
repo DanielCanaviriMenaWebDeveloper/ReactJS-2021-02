@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /*  Cuando es un Componente Funcional Declarativo, este recibe sus propiedades como parametro de la función dentro un 
     objeto llamado props donde cada una de las propiedades del objero props son propiedades del componente. */
@@ -28,11 +29,13 @@ export default function Propiedades(props) {
 
                 {/* Tambien podria recibir el arreglo y a cada uno de esus elementos aplicarle la funcion recibida 
                 que eleva al cuadrado un valor. */}
-                <li>{ props.arreglo.map(props.funcion).join(', ') }</li>{/* Nota: Revisar el proceso que se da con con el método map  */}
+                <li>{ props.arreglo.map(props.funcion).join(', ') }</li> {/* El método map recibe en el parametro de la función cada uno de los elementos del array. */}
 
                 <li>{ props.elementoReact }</li>
                 
                 <li>{ props.componenteReact }</li>
+
+                <li>{ props.arreglo.map(num => num + 5).join(', ') }</li>
             </ul>
         </div>
     );
@@ -42,5 +45,21 @@ export default function Propiedades(props) {
 
 Propiedades.defaultProps = {
     msgDefaultProps: "Mensaje desde una propiedad por Defecto",
+};
+
+/*  https://www.npmjs.com/package/prop-types 
+    PropTypes: Nos permite definir que ciertas propiedades cumplan con un tipo de dato o 
+    bien sean requeridos, recordar siempre imprtar la libreria: 
+        import PropTypes from 'prop-types';
+    Comando para la instalación:
+        npm i -S prop-types
+*/
+
+/* Sintaxis para definir el tipo de dato que deben recibir las propiedades */
+Propiedades.propTypes = {
+    cadena : PropTypes.string,
+    numero : PropTypes.number.isRequired,/* isRequired indica que la propiedad es requerida */
+    boolean : PropTypes.bool,
+    arreglo : PropTypes.array,
 };
 

@@ -39,6 +39,9 @@ function App() {
 						funcion = { (num) => num * num }
 						elementoReact = { <i>Esto es un elemento React</i> }
 						componenteReact = { <Componente msg = "Soy un componente pasado como Propiedad"/>}
+						funcion2 = { function cuadrado(num) {
+							return num + 5
+						} }
 					/>
 				</section>
 			</header>
