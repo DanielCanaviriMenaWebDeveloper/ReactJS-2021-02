@@ -25,11 +25,12 @@ function App() {
 				</section>
 				
 				<section>
-					<Componente msg="Hola este es un mensaje desde el componente Padre" />
+					<Componente msg = "Hola este es un mensaje desde el componente Padre" />
 
 					<hr />
-
-					<Propiedades />
+					{/* Definiendo distintos tipos de atributos que seran enviados al componente dentro 
+					el objeto props*/}
+					<Propiedades cadena = "Esto es un String" numero = { 19 } boolean = { false }/>
 				</section>
 			</header>
 

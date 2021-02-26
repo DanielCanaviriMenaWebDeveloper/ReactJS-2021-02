@@ -11,9 +11,13 @@ export default function Propiedades(props) {
 
             {/* Crearemos una lista desordenada donde cada una de sus list item reciba los atributos que 
             se le envian desde el componente padre App.js */}
-
             <ul>
+                <li>{ props.cadena }</li>
+
+                <li>{ props.numero }</li>
                 
+                {/* Operador ternario para validar el valor de la propiedad recibida de tipo boolean */}
+                <li>{ props.boolean ? 'Verdadero' : 'Falso' }</li>
             </ul>
         </div>
     );
