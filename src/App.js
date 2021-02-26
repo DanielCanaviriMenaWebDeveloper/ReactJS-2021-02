@@ -34,8 +34,11 @@ function App() {
 						cadena = "Esto es un String" 
 						numero = { 19 } 
 						boolean = { false }
-						arreglo = { [1, 2, 3] }
+						arreglo = { [1, 2, 3, 4, 5, 6] }
 						objeto = { {nombre: 'Daniel', edad:37, profesion: 'Ingeniero de Sistemas'} }
+						funcion = { (num) => num * num }
+						elementoReact = { <i>Esto es un elemento React</i> }
+						componenteReact = { <Componente msg = "Soy un componente pasado como Propiedad"/>}
 					/>
 				</section>
 			</header>

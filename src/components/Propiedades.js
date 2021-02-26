@@ -23,6 +23,16 @@ export default function Propiedades(props) {
                 <li>{ props.arreglo.join(", ") }</li>
 
                 <li>{ props.objeto.nombre + ' - ' + props.objeto.edad + ' años - ' + props.objeto.profesion }</li> {/* Nota: Ver la forma de mostrar el objeto sin tener que concatenar */}
+
+                <li>{ props.funcion(2) }</li>
+
+                {/* Tambien podria recibir el arreglo y a cada uno de esus elementos aplicarle la funcion recibida 
+                que eleva al cuadrado un valor. */}
+                <li>{ props.arreglo.map(props.funcion).join(', ') }</li>{/* Nota: Revisar el proceso que se da con con el método map  */}
+
+                <li>{ props.elementoReact }</li>
+                
+                <li>{ props.componenteReact }</li>
             </ul>
         </div>
     );
