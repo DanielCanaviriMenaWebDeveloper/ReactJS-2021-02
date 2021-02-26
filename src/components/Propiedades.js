@@ -18,6 +18,11 @@ export default function Propiedades(props) {
                 
                 {/* Operador ternario para validar el valor de la propiedad recibida de tipo boolean */}
                 <li>{ props.boolean ? 'Verdadero' : 'Falso' }</li>
+
+                {/* https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/join */}
+                <li>{ props.arreglo.join(", ") }</li>
+
+                <li>{ props.objeto.nombre + ' - ' + props.objeto.edad + ' años - ' + props.objeto.profesion }</li> {/* Nota: Ver la forma de mostrar el objeto sin tener que concatenar */}
             </ul>
         </div>
     );

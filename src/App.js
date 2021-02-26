@@ -30,7 +30,13 @@ function App() {
 					<hr />
 					{/* Definiendo distintos tipos de atributos que seran enviados al componente dentro 
 					el objeto props*/}
-					<Propiedades cadena = "Esto es un String" numero = { 19 } boolean = { false }/>
+					<Propiedades 
+						cadena = "Esto es un String" 
+						numero = { 19 } 
+						boolean = { false }
+						arreglo = { [1, 2, 3] }
+						objeto = { {nombre: 'Daniel', edad:37, profesion: 'Ingeniero de Sistemas'} }
+					/>
 				</section>
 			</header>
 
