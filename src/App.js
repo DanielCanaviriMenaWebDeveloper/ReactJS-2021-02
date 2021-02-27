@@ -2,6 +2,7 @@ import React from 'react';
 import logo from "./logo.svg";
 import Componente from './components/Componente';
 import Propiedades from './components/Propiedades';
+import Estado from './components/Estado';
 import "./App.css";
 
 function App() {
@@ -43,6 +44,10 @@ function App() {
 							return num + 5
 						} }
 					/>
+
+					<hr />
+
+					<Estado />
 				</section>
 			</header>
 
