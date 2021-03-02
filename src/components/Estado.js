@@ -1,5 +1,13 @@
 import React, {Component} from 'react';
 
+function EstadoAHijo(props) {
+    return(
+        <div>
+            <h3>{ props.contadorHijo }</h3>
+        </div>
+    );
+}
+
 class Estado extends Component {
     constructor(props) {
 		super(props);
@@ -10,6 +18,13 @@ class Estado extends Component {
 		};
 
 		setInterval(() => {
+
+            /*  No recomendado cambiar el estado directamente, lo recomendado es hacer uso del 
+                método setState();
+                
+                this.state.contador += 1;
+            */
+
 			this.setState({
                 contador: this.state.contador + 1,
                 contador_2: this.state.contador_2 + 10,
@@ -22,15 +37,17 @@ class Estado extends Component {
 	}
 
     render() {
-        return(
-            <div>
-                <h2>Este es mi componente estado</h2>
-
-                <p>{ this.state.contador }</p>
-
-                <p>{ this.state.contador_2 }</p>
-            </div>
-        );
+        return (
+			<div>
+				<h2>Este es mi componente estado</h2>
+				{/* Uso de una de las propiedades del objeto state */}
+				<p>{this.state.contador}</p>{" "}
+				{/* Uso de otra de las propiedades del objeto state */}
+				<p>{this.state.contador_2}</p>{" "}
+                {/* Pasando a un componente hijo uno de los estados del componente padre */}
+				<EstadoAHijo contadorHijo = { this.state.contador } />
+			</div>
+		);
     }
 }
 
