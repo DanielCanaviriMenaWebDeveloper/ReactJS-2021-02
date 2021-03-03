@@ -1,54 +1,53 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
 function EstadoAHijo(props) {
-    return(
-        <div>
-            <h3>{ props.contadorHijo }</h3>
-        </div>
-    );
+	return (
+		<div>
+			<h3>{props.contadorHijo}</h3>
+		</div>
+	);
 }
 
 class Estado extends Component {
-    constructor(props) {
+	constructor(props) {
 		super(props);
 		/* Creando el objeto del estado */
 		this.state = {
-            contador: 0,
-            contador_2: 100,
+			contador: 0,
+			contador_2: 100,
 		};
 
-		/* setInterval(() => { */
-
-            /*  No recomendado cambiar el estado directamente, lo recomendado es hacer uso del 
+		setInterval(() => {
+			/*  No recomendado cambiar el estado directamente, lo recomendado es hacer uso del 
                 método setState();
                 
                 this.state.contador += 1;
             */
 
-			/* this.setState({
-                contador: this.state.contador + 1,
-                contador_2: this.state.contador_2 + 10,
+			this.setState({
+				contador: this.state.contador + 1,
+				contador_2: this.state.contador_2 + 10,
 			});
-		}, 1000); */
-        /*  Warning: Advertencia: No se puede llamar a setState en un componente que aún no está montado. 
+		}, 1000);
+		/*  Warning: Advertencia: No se puede llamar a setState en un componente que aún no está montado. 
             Esta es una operación no operativa, pero podría indicar un error en su aplicación. En su lugar, 
             asigne a `this.state` directamente o defina una propiedad de clase` state = {}; `con el estado 
             deseado en el componente Estado. */
 	}
 
-    render() {
-        return (
+	render() {
+		return (
 			<div>
 				<h2>Este es mi componente estado</h2>
 				{/* Uso de una de las propiedades del objeto state */}
 				<p>{this.state.contador}</p>{" "}
 				{/* Uso de otra de las propiedades del objeto state */}
 				<p>{this.state.contador_2}</p>{" "}
-                {/* Pasando a un componente hijo uno de los estados del componente padre */}
-				<EstadoAHijo contadorHijo = { this.state.contador } />
+				{/* Pasando a un componente hijo uno de los estados del componente padre */}
+				<EstadoAHijo contadorHijo={this.state.contador} />
 			</div>
 		);
-    }
+	}
 }
 
 export default Estado;
