@@ -5,7 +5,6 @@ import Propiedades from './components/Propiedades';
 import Estado from './components/Estado';
 import "./App.css";
 import RenderizadoCondicional from './components/RenderizadoCondicional';
-import RenderizadoElementos from './components/RenderizadoElementos';
 
 function App() {
 	return (
@@ -54,15 +53,11 @@ function App() {
 					<hr />
 
 					<RenderizadoCondicional />
-
-					<hr />
-
-					<RenderizadoElementos />
 				</section>
 			</header>
 
 		</div>
-	)
+	);
 }
 
 export default App;
