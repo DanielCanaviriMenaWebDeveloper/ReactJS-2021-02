@@ -57,26 +57,28 @@ export class EventosES6 extends Component {
 
 /* https://www.etnassoft.com/2017/01/03/aprender-javascript-en-2016/ */
 
-
+/* Properties Initializer */
 export class EventosES7 extends Component {
-	constructor(props) {
+	/* constructor(props) {
 		super(props);
 
 		this.state = {
 			contador: 0,
 		};
 
-		/* Código para realizar el bindeo - Recomendable siempre en el constructor de la clase. */
-
-		/* Al método sumar de la clase enlazame el this de la clase */
 		this.sumar = this.sumar.bind(this);
 
 		this.restar = this.restar.bind(this);
 
 		console.log(this.sumar);
-	}
+    } */
+    
+    state = {
+        contador: 0
+    };
 
-	sumar(e) {
+
+	sumar = e => {
 		console.log("Sumando");
 
 		console.log(this); /* Sin el bind esto retornaria undefined */
@@ -86,7 +88,7 @@ export class EventosES7 extends Component {
 		});
 	}
 
-	restar(e) {
+	restar = e => {
 		console.log("Restando");
 
 		this.setState({
