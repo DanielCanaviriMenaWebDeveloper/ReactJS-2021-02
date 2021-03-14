@@ -116,3 +116,5 @@ export class EventosES7 extends Component {
 		);
 	}
 }
+
+en esta parte me quede
