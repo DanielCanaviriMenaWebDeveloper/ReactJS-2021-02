@@ -6,7 +6,7 @@ import Estado from './components/Estado';
 import "./App.css";
 import RenderizadoCondicional from './components/RenderizadoCondicional';
 import RenderizandoElementos from './components/RenderizandoElementos';
-import { EventosES6, EventosES7, MasSobreEventos } from './components/Eventos';
+import { EventosES6, EventosES7 } from './components/Eventos';
 
 function App() {
 	return (
@@ -65,9 +65,6 @@ function App() {
 
 					<hr />
 					<EventosES7 />
-
-					<hr />
-					<MasSobreEventos />
 				</section>
 			</header>
 		</div>

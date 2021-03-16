@@ -16,7 +16,7 @@ export class EventosES6 extends Component {
 
         this.restar = this.restar.bind(this); 
 
-        /* console.log(this.sumar); */
+        console.log(this.sumar);
     }
 
     sumar(e) {
@@ -83,8 +83,8 @@ export class EventosES7 extends Component {
 	}
 
 	restar = e => {
-        console.log("Restando");
-        
+		console.log("Restando");
+
 		this.setState({
 			contador: this.state.contador - 1,
 		});
@@ -111,29 +111,3 @@ export class EventosES7 extends Component {
 	}
 }
 
-/* ================================================================================================================ */
-/* ======================Eventos Nativos, Sintéticos & Perzonalizados ============================================= */
-/*
-    -   Toda función manejadora de eventos solamente puede recibir como parametro el evento en si.
-    -   Todo evento (e) tiene un atributo llamado target, que es el objeto que origina el evento.
-    -   React envuelve el evento nativo del navegador para que pueda 
-*/
-export class MasSobreEventos extends Component {
-    /* handle = Manejar */
-    handleClick = (e) => {
-
-        console.log(e); // Expected Output : SyntheticBaseEvent
-
-        console.log(e.target); // Expected Output : <button class="btn">...</button>
-    }
-    
-    
-    render() {
-        return (
-            <div>
-                <h2>Más sobre eventos</h2>
-                <button onClick={ this.handleClick }>Saludar</button>
-            </div>
-        );
-    }
-}
