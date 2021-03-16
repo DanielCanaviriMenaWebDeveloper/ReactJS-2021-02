@@ -123,6 +123,7 @@ export class EventosES7 extends Component {
     -   Que pasa si tengo la nesecidad de acceder al evento nativo, lo hacemos de la siguiente forma: 
             e.nativeEvent
 */
+/* ====================== Eventos Nativos y Sinteticos ============================================= */
 export class MasSobreEventos extends Component {
     /* handle = Manejar */
     handleClick = (e) => {
@@ -151,6 +152,8 @@ export class MasSobreEventos extends Component {
     }
 }
 
+/* ====================== Eventos Sinteticos con Parametros ============================================= */
+
 export class EventosConParametros extends Component {
     handleClick(e, mensaje) {
         console.log(e);
@@ -163,8 +166,44 @@ export class EventosConParametros extends Component {
             <div>
                 <h2>Eventos con Parametros</h2>
                 {/* Forma de pasar parametros junto a un evento */}
-                <button onClick={ (e) => this.handleClick(e, "Hola pasando parametros desde un evento") }>Saludar</button>
+                <button onClick = { (e) => this.handleClick(e, "Hola pasando parametros desde un evento") }>Saludar</button>
             </div>
         );
     }
+}
+
+/* ======================Eventos Perzonalizados ============================================= */
+
+/* Creando un componente Boton Personalizado */
+/* 
+function Boton(props) {
+    return(
+        <button onClick = { props.myOnClick }>Boton hecho componente</button>
+    )
+} 
+
+const Boton = props => <button onClick = { props.myOnClick }>Boton hecho componente</button>
+
+*/
+
+/* Simplificando nuestro código usando un arrow function y desestructurando el objeto props */
+const Boton = ({myOnClick}) => <button onClick = { myOnClick }>Boton hecho componente</button>
+
+export class EventosPerzonalizados extends Component {
+	handleClick(e, mensaje) {
+		console.log(e);
+		console.log(e.target);
+		console.log(mensaje);
+    }
+    
+	render() {
+		return (
+			<div>
+                <h2>Eventos Personalizados</h2>
+
+                {/* Evento Personalizado llamado myOnClick */}
+				<Boton myOnClick = { e => this.handleClick(e, "Hola pasando el parámetro desde un evento personalizado") }/>
+			</div>
+		);
+	}
 }
