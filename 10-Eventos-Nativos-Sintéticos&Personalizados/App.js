@@ -7,7 +7,7 @@ import "./App.css";
 import RenderizadoCondicional from './components/RenderizadoCondicional';
 import RenderizandoElementos from './components/RenderizandoElementos';
 import { EventosConParametros, EventosES6, EventosES7, EventosPerzonalizados, MasSobreEventos } from './components/Eventos';
-import ComunicacionComponentes from './components/ComunicacionComponentes';
+
 function App() {
 	return (
 		<div className="App">
@@ -74,9 +74,6 @@ function App() {
 
 					<hr />
 					<EventosPerzonalizados />
-
-					<hr />
-					<ComunicacionComponentes />
 				</section>
 			</header>
 		</div>
