@@ -46,6 +46,20 @@
 
 import React, { Component } from 'react';
 
+class Reloj extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	componentWillUnmount() {
+		console.log(3, "El componente Reloj ha sido eliminado del DOM");
+	}
+
+	render() {
+		return <h3>{this.props.hora}</h3>;
+	}
+}
+
 export default class CicloVida extends Component {
     constructor(props) {
         super(props);
@@ -53,9 +67,12 @@ export default class CicloVida extends Component {
 
         this.state = {
             hora : new Date().toLocaleTimeString(),
+            visible : false,
         };
 
         this.temporizador = null;
+
+
     }
 
     componentDidMount() {
@@ -78,10 +95,16 @@ export default class CicloVida extends Component {
     
     iniciar = () => {
         this.tictac();
+        this.setState({
+            visible : true,
+        });
     }
 
     detener = () => {
         clearInterval(this.temporizador);
+        this.setState({
+            visible : false,
+        });
     }
     render() {
         console.log(4, "El componente se dibuja (o redibuja por algun cambio) en el DOM");
@@ -89,7 +112,9 @@ export default class CicloVida extends Component {
             <>
                 <h2>Ciclo de Vida de los Componentes de Clase</h2>
 
-                <h3>{ this.state.hora }</h3>
+                {/* <h3>{ this.state.hora }</h3> */}
+
+                { this.state.visible && <Reloj hora = { this.state.hora }/> }
 
                 <button onClick = { this.iniciar }>Iniciar</button>
                 <button onClick = { this.detener }>Detener</button>
