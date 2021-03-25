@@ -113,7 +113,9 @@ export default class CicloVida extends Component {
                 <h2>Ciclo de Vida de los Componentes de Clase</h2>
 
                 {/* <h3>{ this.state.hora }</h3> */}
-
+                {/* Operador de Cortocircuito : Cuando el valor de la isquierda tiende a
+                falso se ejecuta ese valor, si tiende a verdadero ejecuta el valor de la 
+                derecha. */}
                 { this.state.visible && <Reloj hora = { this.state.hora }/> }
 
                 <button onClick = { this.iniciar }>Iniciar</button>
